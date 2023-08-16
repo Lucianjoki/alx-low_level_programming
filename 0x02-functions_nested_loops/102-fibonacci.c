@@ -1,26 +1,28 @@
 #include <stdio.h>
 
  /**
-  * main - Entry point - Prints the first 50 fibonacci numbers starting 1 and 2
-  * @n: number of fibonacci numbers
-  * Return: Always 0
+  * main - Entry point
+  * @n: value of the fibonacci printed
+  *
+  * Return: Always 0 (Success)
   */
 
 int main(void)
 
 {
-	int c;
-	long int n1, n2, fn;
+	unsigned long fib1 = 1, fib2 = 2, sum;
 
-	n1 = 1;
-	n2 = 2;
-	printf("%ld, %ld", n1, n2);
-	for (c = 0; c < 48; c++)
+	printf("%lu, %lu", fib1, fib2);
+
+
+	for (int count = 2; count < 50; count++)
 	{
-		fn = n1 + n2;
-		printf(", %ld", fn);
-		n1 = n2;
-		n2 = fn;
+		sum = fib1 + fib2;
+		printf(", %lu", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+
 	}
 	printf("\n");
 	return (0);
