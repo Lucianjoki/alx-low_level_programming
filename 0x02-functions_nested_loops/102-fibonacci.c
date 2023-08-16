@@ -1,8 +1,8 @@
 #include <stdio.h>
 
  /**
-  * main - Entry point
-  * @n: value of the fibonacci printed
+  * main - main function
+  * Description: function to print fibonacci sequence
   *
   * Return: Always 0 (Success)
   */
@@ -10,12 +10,10 @@
 int main(void)
 
 {
-	unsigned long fib1 = 1, fib2 = 2, sum;
-
-	printf("%lu, %lu", fib1, fib2);
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
 
-	for (int count = 2; count < 50; count++)
+	for (count = 0; count < 50; count++)
 	{
 		sum = fib1 + fib2;
 		printf(", %lu", sum);
@@ -23,7 +21,12 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
+
+
 	}
-	printf("\n");
 	return (0);
 }
