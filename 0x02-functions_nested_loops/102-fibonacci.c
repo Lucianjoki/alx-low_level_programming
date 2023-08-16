@@ -1,12 +1,13 @@
 #include <stdio.h>
 
  /**
-  * main - Entry point. Prints the add of the fibonacci numbers
-  *
+  * main - Entry point - Prints the first 50 fibonacci numbers starting 1 and 2
+  * @n: number of fibonacci numbers
   * Return: Always 0
   */
 
-int main(void)
+int main
+
 {
 	int c;
 	long int n1, n2, fn;
