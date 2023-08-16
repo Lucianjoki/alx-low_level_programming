@@ -2,21 +2,25 @@
 
  /**
   * main - main function
+  *
   * Description: function to print fibonacci sequence
   *
   * Return: Always 0 (Success)
+  *
   */
 
 int main(void)
 
 {
+	int count;
 	unsigned long fib1 = 0, fib2 = 1, sum;
 
-
-	for (count = 0; count < 50; count++)
+	count = 0;
+	while (count < 50)
 	{
+
 		sum = fib1 + fib2;
-		printf(", %lu", sum);
+		printf("%lu", sum);
 
 		fib1 = fib2;
 		fib2 = sum;
@@ -25,7 +29,7 @@ int main(void)
 			printf("\n");
 		else
 			printf(", ");
-
+		count++
 
 	}
 	return (0);
