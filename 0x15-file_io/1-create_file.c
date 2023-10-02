@@ -26,8 +26,10 @@ int create_file(const char *filename, char *text_content)
 		text_content = " ";
 
 	for (mletters = 0; text_content[mletters]; mletters++)
+		;
 
 	rwr = write(file_k, text_content, mletters);
+
 
 	if (rwr == -1)
 		return (-1);
