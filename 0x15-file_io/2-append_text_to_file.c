@@ -23,17 +23,15 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (file_p == -1)
 		return (-1);
 
-	if (text_content != NULL)
+	if (text_content)
 	{
 		for (kletters = 0; text_content[kletters]; kletters++)
 			;
 
 		 rwr = write(file_p, text_content, kletters);
-	if (rwr == -1)
-	{
-		close(file_p);
-		return (-1);
+		if (rwr == -1)
+			return (-1);
 	}
 	close(file_p);
-	return (1);
+	return (-1);
 }
